@@ -14,9 +14,8 @@ int makeDIR(char *new_directory_name) {
         if(pid == 0) {
             result = execl("/bin/mkdir", "mkdir", new_directory_name, NULL);
            
-            if(result == -1) {
+            if(result == -1)
                 printf("mkdir %s failed\n", new_directory_name);
-            }
 
             exit(result);
         } else {
